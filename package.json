@@ -1,34 +1,42 @@
 {
   "name": "@12emake/design-system",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Design system",
   "author": "victortrinh",
   "license": "MIT",
   "repository": "victortrinh/@12emake/design-system",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
-  "source": "src/index.tsx",
+  "source": "src/index.ts",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "start-storybook",
+    "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "yarn install && yarn build",
+    "deploy": "gh-pages -d dist",
+    "publish": "npm publish --access public"
   },
   "peerDependencies": {
     "react": "^16.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
-    "@storybook/react": "^5.3.19",
+    "@storybook/addon-actions": "^6.1.2",
+    "@storybook/addon-essentials": "^6.1.2",
+    "@storybook/addon-links": "^6.1.2",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.2",
+    "@storybook/storybook-deployer": "^2.8.7",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -54,13 +62,19 @@
     "gh-pages": "^2.2.0",
     "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.4",
+    "prettier": "^2.2.0",
     "react": "^16.13.1",
+    "react-docgen-typescript": "^1.20.5",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
     "typescript": "^3.7.5"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@types/testing-library__dom": "^7.5.0"
+  }
 }
