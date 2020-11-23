@@ -7,6 +7,10 @@ import {
 export interface DrawerProps
   extends Omit<MaterialDrawerProps, 'onClose' | 'open'> {
   /**
+   * The anchor
+   */
+  anchor: 'left' | 'right';
+  /**
    * Callback fired when the component requests to be closed.
    *
    * @param {object} event The event source of the callback.
@@ -38,4 +42,8 @@ export const Drawer: React.FC<DrawerProps> = ({ ...props }) => {
       {...props}
     />
   );
+};
+
+Drawer.defaultProps = {
+  anchor: 'left'
 };
