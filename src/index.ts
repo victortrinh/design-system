@@ -30,3 +30,4 @@ export { ThemeProvider } from './themes/themeProvider';
  * UTILS
  ****************/
 export { useMediaQueryInternal as useMediaQuery } from './utils/useMediaQuery';
+export { useThemeInternal as useTheme } from './utils/useTheme';
