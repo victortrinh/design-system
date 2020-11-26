@@ -1,4 +1,5 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, lighten } from '@material-ui/core/styles';
+
 import { neuromancerColors } from '../colors/neuromancerColors';
 
 export const neuromancerTheme = createMuiTheme({
@@ -52,7 +53,7 @@ export const neuromancerDarkTheme = createMuiTheme({
     MuiBottomNavigationAction: {
       root: {
         '&$selected': {
-          color: neuromancerColors.primary.main
+          color: neuromancerColors.primary.light && lighten(neuromancerColors.primary.light, 0.25)
         }
       }
     }

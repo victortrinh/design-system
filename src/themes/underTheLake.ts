@@ -1,4 +1,5 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, lighten } from '@material-ui/core/styles';
+
 import { underTheLakeColors } from '../colors/underTheLakeColors';
 
 export const underTheLakeTheme = createMuiTheme({
@@ -52,7 +53,7 @@ export const underTheLakeDarkTheme = createMuiTheme({
     MuiBottomNavigationAction: {
       root: {
         '&$selected': {
-          color: underTheLakeColors.primary.light
+          color: underTheLakeColors.primary.light && lighten(underTheLakeColors.primary.light, 0.25)
         }
       }
     }

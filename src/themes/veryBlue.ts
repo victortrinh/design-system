@@ -1,4 +1,5 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, lighten } from '@material-ui/core/styles';
+
 import { veryBlueColors } from '../colors/veryBlueColors';
 
 export const veryBlueTheme = createMuiTheme({
@@ -52,7 +53,7 @@ export const veryBlueDarkTheme = createMuiTheme({
     MuiBottomNavigationAction: {
       root: {
         '&$selected': {
-          color: veryBlueColors.primary.light
+          color: veryBlueColors.primary.light && lighten(veryBlueColors.primary.light, 0.25)
         }
       }
     }
