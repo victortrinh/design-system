@@ -1,11 +1,12 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { NavigationBar, NavigationBarProps } from './navigationBar';
-import { Toolbar } from './toolbar';
+
 import { Button } from '../button/button';
+import React from 'react';
+import { Toolbar } from './toolbar';
 
 export default {
-  title: 'Components/Layout/NavigationBar',
+  title: 'Components/Navigation/NavigationBar',
   component: NavigationBar
 } as Meta;
 

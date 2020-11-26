@@ -52,7 +52,7 @@ export const veryBlueDarkTheme = createMuiTheme({
     MuiBottomNavigationAction: {
       root: {
         '&$selected': {
-          color: veryBlueColors.secondary.light
+          color: veryBlueColors.primary.light
         }
       }
     }

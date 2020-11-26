@@ -52,7 +52,7 @@ export const underTheLakeDarkTheme = createMuiTheme({
     MuiBottomNavigationAction: {
       root: {
         '&$selected': {
-          color: underTheLakeColors.secondary.light
+          color: underTheLakeColors.primary.light
         }
       }
     }

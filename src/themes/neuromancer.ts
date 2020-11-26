@@ -52,7 +52,7 @@ export const neuromancerDarkTheme = createMuiTheme({
     MuiBottomNavigationAction: {
       root: {
         '&$selected': {
-          color: neuromancerColors.secondary.light
+          color: neuromancerColors.primary.main
         }
       }
     }

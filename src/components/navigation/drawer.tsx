@@ -1,8 +1,9 @@
-import React from 'react';
 import {
-  SwipeableDrawer,
-  DrawerProps as MaterialDrawerProps
+  DrawerProps as MaterialDrawerProps,
+  SwipeableDrawer
 } from '@material-ui/core';
+
+import React from 'react';
 
 export interface DrawerProps
   extends Omit<MaterialDrawerProps, 'onClose' | 'open'> {
