@@ -17,7 +17,6 @@ export { Hidden } from './components/layout/hidden';
 // Navigation
 export { BottomNavigation } from './components/navigation/bottomNavigation/bottomNavigation';
 export { BottomNavigationAction } from './components/navigation/bottomNavigation/bottomNavigationAction';
-export { Drawer } from './components/navigation/drawer';
 export { NavigationBar } from './components/navigation/navigationBar';
 export { Toolbar } from './components/navigation/toolbar';
 
