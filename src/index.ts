@@ -30,6 +30,9 @@ export { BottomNavigationAction } from './components/navigation/bottomNavigation
 export { NavigationBar } from './components/navigation/navigationBar';
 export { Toolbar } from './components/navigation/toolbar';
 
+// Switch
+export { Switch } from './components/switch/switch';
+
 /****************
  * THEMES
  ****************/
