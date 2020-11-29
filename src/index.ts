@@ -18,11 +18,13 @@ export { GridList } from './components/layout/gridList';
 export { Hidden } from './components/layout/hidden';
 
 // List
+export { Divider } from './components/list/shared/divider';
 export { List } from './components/list/list';
 export { ListItem } from './components/list/shared/listItem';
 export { ListItemIcon } from './components/list/shared/listItemIcon';
 export { ListItemSecondaryAction } from './components/list/shared/listItemSecondaryAction';
 export { ListItemText } from './components/list/shared/listItemText';
+export { ListSubheader } from './components/list/shared/listSubheader';
 
 // Navigation
 export { BottomNavigation } from './components/navigation/bottomNavigation/bottomNavigation';
