@@ -26,6 +26,9 @@ export { ListItemSecondaryAction } from './components/list/shared/listItemSecond
 export { ListItemText } from './components/list/shared/listItemText';
 export { ListSubheader } from './components/list/shared/listSubheader';
 
+// Loading
+export { Loading } from './components/loading/loading';
+
 // Navigation
 export { BottomNavigation } from './components/navigation/bottomNavigation/bottomNavigation';
 export { BottomNavigationAction } from './components/navigation/bottomNavigation/bottomNavigationAction';
