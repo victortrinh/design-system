@@ -1,19 +1,24 @@
-import React from 'react';
 import {
-  ThemeProvider,
+  Container,
   CssBaseline,
-  withStyles,
-  Container
+  ThemeProvider,
+  withStyles
 } from '@material-ui/core';
 import {
-  neuromancerTheme,
-  neuromancerDarkTheme
+  defaultDarkTheme,
+  defaultTheme
+} from '../src/themes/default';
+import {
+  neuromancerDarkTheme,
+  neuromancerTheme
 } from '../src/themes/neuromancer';
 import {
-  underTheLakeTheme,
-  underTheLakeDarkTheme
+  underTheLakeDarkTheme,
+  underTheLakeTheme
 } from '../src/themes/underTheLake';
-import { veryBlueTheme, veryBlueDarkTheme } from '../src/themes/veryBlue';
+import { veryBlueDarkTheme, veryBlueTheme } from '../src/themes/veryBlue';
+
+import React from 'react';
 import { themes } from '@storybook/theming';
 
 export const parameters = {
@@ -38,7 +43,9 @@ export const globalTypes = {
         'Under the lake',
         'Dark Under the lake',
         'Very blue',
-        'Dark Very blue'
+        'Dark Very blue',
+        'Default',
+        'Dark Default'
       ]
     }
   }
@@ -57,6 +64,10 @@ const withThemeProvider = (Story, context) => {
         return underTheLakeDarkTheme;
       case 'Neuromancer':
         return neuromancerTheme;
+      case 'Default':
+        return defaultTheme;
+      case 'Dark Default':
+        return defaultDarkTheme;
       default:
         return neuromancerDarkTheme;
     }

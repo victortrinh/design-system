@@ -1,12 +1,14 @@
-import React from 'react';
 import {
   CssBaseline,
   Theme as MaterialTheme,
   MuiThemeProvider as MaterialThemeProvider
 } from '@material-ui/core';
+import { defaultDarkTheme, defaultTheme } from './default';
 import { neuromancerDarkTheme, neuromancerTheme } from './neuromancer';
-import { veryBlueDarkTheme, veryBlueTheme } from './veryBlue';
 import { underTheLakeDarkTheme, underTheLakeTheme } from './underTheLake';
+import { veryBlueDarkTheme, veryBlueTheme } from './veryBlue';
+
+import React from 'react';
 
 export interface ThemeProps {
   theme:
@@ -15,7 +17,9 @@ export interface ThemeProps {
     | 'neuromancer'
     | 'darkNeuromancer'
     | 'underTheLake'
-    | 'darkUnderTheLake';
+    | 'darkUnderTheLake'
+    | 'default'
+    | 'darkDefault';
 }
 
 export const ThemeProvider: React.FC<ThemeProps> = ({ theme, children }) => {
@@ -31,6 +35,10 @@ export const ThemeProvider: React.FC<ThemeProps> = ({ theme, children }) => {
         return underTheLakeDarkTheme;
       case 'neuromancer':
         return neuromancerTheme;
+      case 'default':
+        return defaultTheme;
+      case 'darkDefault':
+        return defaultDarkTheme;
       default:
         return neuromancerDarkTheme;
     }
