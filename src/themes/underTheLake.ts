@@ -42,6 +42,21 @@ export const underTheLakeDarkTheme = createMuiTheme({
     type: 'dark'
   },
   overrides: {
+    MuiTextField: {
+      "root": {
+        '& label.Mui-focused': {
+          color: underTheLakeColors.secondary.main,
+        },
+        '& .MuiInput-underline:after': {
+          borderBottomColor: underTheLakeColors.secondary.main,
+        },
+        '& .MuiOutlinedInput-root': {
+          '&.Mui-focused fieldset': {
+            borderColor: underTheLakeColors.secondary.main,
+          },
+        },
+      }
+    },
     MuiButton: {
       containedPrimary: {
         background: `linear-gradient(45deg, ${underTheLakeColors.primary.main} 0%, ${underTheLakeColors.primary.light} 100%)`

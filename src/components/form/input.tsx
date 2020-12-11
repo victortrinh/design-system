@@ -1,8 +1,9 @@
+import { BaseTextFieldProps, TextField } from '@material-ui/core';
+
 import React from 'react';
-import { TextField, BaseTextFieldProps } from '@material-ui/core';
 
 export interface InputProps extends BaseTextFieldProps {
-  variant: 'outlined' | 'filled' | 'standard';
+  variant?: 'outlined' | 'filled' | 'standard';
   label?: string;
 }
 

@@ -42,6 +42,21 @@ export const veryBlueDarkTheme = createMuiTheme({
     type: 'dark'
   },
   overrides: {
+    MuiTextField: {
+      "root": {
+        '& label.Mui-focused': {
+          color: veryBlueColors.secondary.main,
+        },
+        '& .MuiInput-underline:after': {
+          borderBottomColor: veryBlueColors.secondary.main,
+        },
+        '& .MuiOutlinedInput-root': {
+          '&.Mui-focused fieldset': {
+            borderColor: veryBlueColors.secondary.main,
+          },
+        },
+      }
+    },
     MuiButton: {
       containedPrimary: {
         background: `linear-gradient(45deg, ${veryBlueColors.primary.main} 0%, ${veryBlueColors.primary.light} 100%)`
