@@ -4,6 +4,12 @@ import {
   ThemeProvider,
   withStyles
 } from '@material-ui/core';
+
+import { themes } from '@storybook/theming';
+
+import React from 'react';
+
+import { blackWhiteDarkTheme, blackWhiteTheme } from "../src/themes/blackWhite";
 import {
   defaultDarkTheme,
   defaultTheme
@@ -21,9 +27,6 @@ import {
   underTheLakeTheme
 } from '../src/themes/underTheLake';
 import { veryBlueDarkTheme, veryBlueTheme } from '../src/themes/veryBlue';
-
-import React from 'react';
-import { themes } from '@storybook/theming';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -51,7 +54,9 @@ export const globalTypes = {
         'Very blue',
         'Dark Very blue',
         'Default',
-        'Dark Default'
+        'Dark Default',
+        'Black White',
+        'Dark Black White'
       ]
     }
   }
@@ -78,6 +83,10 @@ const withThemeProvider = (Story, context) => {
         return redTheme;
       case 'Dark red':
         return redDarkTheme;
+      case 'Black White':
+        return blackWhiteTheme;
+      case 'Dark Black White':
+        return blackWhiteDarkTheme;
       default:
         return neuromancerDarkTheme;
     }

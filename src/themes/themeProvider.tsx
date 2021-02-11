@@ -3,6 +3,7 @@ import {
   Theme as MaterialTheme,
   MuiThemeProvider as MaterialThemeProvider
 } from '@material-ui/core';
+import { blackWhiteDarkTheme, blackWhiteTheme } from './blackWhite';
 import { defaultDarkTheme, defaultTheme } from './default';
 import { neuromancerDarkTheme, neuromancerTheme } from './neuromancer';
 import { redDarkTheme, redTheme } from './redTheme';
@@ -13,6 +14,8 @@ import React from 'react';
 
 export interface ThemeProps {
   theme:
+    | 'blackWhite'
+    | 'darkBlackWhite'
     | 'veryBlue'
     | 'darkVeryBlue'
     | 'neuromancer'
@@ -28,6 +31,10 @@ export interface ThemeProps {
 export const ThemeProvider: React.FC<ThemeProps> = ({ theme, children }) => {
   const getTheme = (theme: string): MaterialTheme => {
     switch (theme) {
+      case 'blackWhite':
+        return blackWhiteTheme;
+      case 'darkBlackWhite':
+        return blackWhiteDarkTheme;
       case 'veryBlue':
         return veryBlueTheme;
       case 'darkVeryBlue':
