@@ -44,7 +44,7 @@ export const ThemeProvider: React.FC<ThemeProps> = ({ theme, children }) => {
         return defaultDarkTheme;
       case 'red':
         return redTheme;
-      case 'redTheme':
+      case 'redDark':
         return redDarkTheme;
       default:
         return neuromancerDarkTheme;
