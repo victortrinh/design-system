@@ -5,6 +5,7 @@ import {
 } from '@material-ui/core';
 import { defaultDarkTheme, defaultTheme } from './default';
 import { neuromancerDarkTheme, neuromancerTheme } from './neuromancer';
+import { redDarkTheme, redTheme } from './redTheme';
 import { underTheLakeDarkTheme, underTheLakeTheme } from './underTheLake';
 import { veryBlueDarkTheme, veryBlueTheme } from './veryBlue';
 
@@ -19,7 +20,9 @@ export interface ThemeProps {
     | 'underTheLake'
     | 'darkUnderTheLake'
     | 'default'
-    | 'darkDefault';
+    | 'darkDefault'
+    | 'red'
+    | 'redDark';
 }
 
 export const ThemeProvider: React.FC<ThemeProps> = ({ theme, children }) => {
@@ -39,6 +42,10 @@ export const ThemeProvider: React.FC<ThemeProps> = ({ theme, children }) => {
         return defaultTheme;
       case 'darkDefault':
         return defaultDarkTheme;
+      case 'red':
+        return redTheme;
+      case 'redTheme':
+        return redDarkTheme;
       default:
         return neuromancerDarkTheme;
     }

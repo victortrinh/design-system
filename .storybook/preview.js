@@ -13,6 +13,10 @@ import {
   neuromancerTheme
 } from '../src/themes/neuromancer';
 import {
+  redDarkTheme,
+  redTheme
+} from '../src/themes/redTheme';
+import {
   underTheLakeDarkTheme,
   underTheLakeTheme
 } from '../src/themes/underTheLake';
@@ -38,6 +42,8 @@ export const globalTypes = {
     toolbar: {
       icon: 'chevrondown',
       items: [
+        'Red',
+        'Dark red',
         'Neuromancer',
         'Dark Neuromancer',
         'Under the lake',
@@ -68,6 +74,10 @@ const withThemeProvider = (Story, context) => {
         return defaultTheme;
       case 'Dark Default':
         return defaultDarkTheme;
+      case 'Red':
+        return redTheme;
+      case 'Dark red':
+        return redDarkTheme;
       default:
         return neuromancerDarkTheme;
     }
