@@ -7,6 +7,9 @@ export * from './components/button/button';
 // Collapse
 export * from './components/collapse/collapse';
 
+// Card
+export * from './components/card';
+
 // Form
 export * from './components/form/input';
 
