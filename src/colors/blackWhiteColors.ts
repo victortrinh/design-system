@@ -5,6 +5,6 @@ export const blackWhiteColors: ColorPalette = {
     main: '#FFFFFF',
   },
   secondary: {
-    main: '#000000',
+    main: '#253652',
   }
 };
