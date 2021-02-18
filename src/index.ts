@@ -25,6 +25,9 @@ export * from './components/loading/loading';
 // Navigation
 export * from './components/navigation';
 
+// Select
+export * from './components/select';
+
 // Switch
 export * from './components/switch/switch';
 
