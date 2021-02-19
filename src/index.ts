@@ -31,6 +31,9 @@ export * from './components/navigation';
 // Select
 export * from './components/select';
 
+// Snackbar
+export * from "./components/snackbar";
+
 // Switch
 export * from './components/switch/switch';
 
