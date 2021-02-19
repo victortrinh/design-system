@@ -10,6 +10,9 @@ export * from './components/collapse/collapse';
 // Card
 export * from './components/card';
 
+// Dialog
+export * from './components/dialog';
+
 // Form
 export * from './components/form/input';
 
